@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import logo from "../assets/images/logo_privacyproof_1793885188703.jpg";
 
 interface NavbarProps {
   onCtaClick: () => void;
@@ -9,24 +10,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
     <header
       className="sticky top-0 z-40 w-full"
       style={{
-        backgroundColor: 'var(--color-background)',
-        borderBottom: '1px solid var(--color-border)',
+        backgroundColor: "var(--color-background)",
+        borderBottom: "1px solid var(--color-border)",
       }}
     >
       <div
         className="mx-auto flex items-center justify-between gap-8 px-6 py-4"
-        style={{ maxWidth: 'var(--max-content-width)' }}
+        style={{ maxWidth: "var(--max-content-width)" }}
       >
         {/* Brand Zone */}
-        <a href="#" className="flex items-center gap-2.5 whitespace-nowrap shrink-0 group">
+        <a
+          href="#"
+          className="flex items-center gap-2.5 whitespace-nowrap shrink-0 group"
+        >
           <img
-            src="/src/assets/images/logo_privacyproof_1793885188703.jpg"
+            src={logo}
             alt="PrivacyProof emblem"
             className="w-7 h-7 object-contain rounded-[4px]"
           />
           <span
             className="text-[22px] font-semibold tracking-tight text-[#24302B]"
-            style={{ fontFamily: 'var(--font-serif)' }}
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             PrivacyProof
           </span>
