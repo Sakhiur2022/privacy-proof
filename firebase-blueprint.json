@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "Clinician email signup for founding access and audit reports",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Clinician email address",
+          "maxLength": 254
+        },
+        "source": {
+          "type": "string",
+          "description": "Identifier of the CTA button where the user signed up",
+          "maxLength": 100
+        },
+        "tier": {
+          "type": "string",
+          "description": "Pricing tier selected by the user, if any",
+          "maxLength": 50
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Server timestamp of creation"
+        }
+      },
+      "required": ["email", "source", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of incoming email signups from clinicians"
+    }
+  }
+}

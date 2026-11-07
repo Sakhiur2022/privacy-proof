@@ -1,0 +1,6 @@
+{
+  "name": "PrivacyProof",
+  "description": "Independent, plain-English audits of local-only AI note tools for therapists and small practices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
