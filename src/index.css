@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  /* Color tokens anchored in a therapist's office */
+  --color-background: #FAF8F4;
+  --color-surface: #FFFFFF;
+  --color-border: #E4DFD5;
+  --color-text-primary: #24302B;
+  --color-text-muted: #6B7268;
+  --color-accent: #1F6B4E;
+  --color-accent-hover: #17543D;
+  --color-text-on-accent: #FFFFFF;
+  --color-warning: #B07A2A;
+  --color-accent-light: #EDF4F0;
+
+  /* Font families */
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Spacing & shape tokens */
+  --radius: 8px;
+  --card-shadow: 0 2px 8px rgba(36, 48, 43, 0.08);
+  --max-content-width: 1080px;
+  --section-padding-y: 96px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography Scale */
+.type-h1 {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .type-h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+.type-h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .type-h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+}
+
+.type-h3 {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.type-body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.type-small {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.type-mono {
+  font-family: var(--font-mono);
+}
+
+/* Base button primitives conforming strictly to Design Spec */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  transition: transform 150ms ease-out, background-color 150ms ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  transition: transform 150ms ease-out, background-color 150ms ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-light);
+}
+
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Card & Shadow primitive */
+.card-spec-shadow {
+  box-shadow: var(--card-shadow);
+}
