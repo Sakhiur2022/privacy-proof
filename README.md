@@ -2,7 +2,7 @@
 
 > Landing page and waitlist for a pre-launch service: independent, plain-English audits of "local-only" AI note tools for therapists and small practices.
 
-**Live:** <LIVE_URL>
+**Live:** [<LIVE_URL>](https://privacy-proof.vercel.app/)
 
 ## Status
 
